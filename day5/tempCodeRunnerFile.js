@@ -1,1 +1,0 @@
-To access the object properties, you can use the dot notation or the bracket notation.
