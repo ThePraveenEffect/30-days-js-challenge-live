@@ -119,4 +119,4 @@
 
 // document.getElementById('me').innerText = me;
 
-// Substraction operator
+// Substraction operator 
