@@ -49,9 +49,9 @@ function randomQuotes() {
   txt = quotes[randomQuotes];
   const quoteElement = document.getElementById("quote");
   quoteElement.innerHTML = txt;
-  quoteElement.style.fontSize = "20px";
+  quoteElement.style.fontSize = "6vh";
   quoteElement.style.color = "black";
-  (quoteElement.style.fontFamily = "merriweather sans"), sans - serif, serif;
+  quoteElement.style.fontWeight = "bold";
 }
 
 button.addEventListener("click", randomQuotes);
