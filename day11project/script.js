@@ -51,7 +51,7 @@ function randomQuotes() {
   quoteElement.innerHTML = txt;
   quoteElement.style.fontSize = "20px";
   quoteElement.style.color = "black";
-  (quoteElement.style.fontFamily = "merriweather sans"), sans - serif, serif;
+  quoteElement.style.fontFamily = "merriweather sans", sans - serif, serif;
 }
 
 button.addEventListener("click", randomQuotes);
