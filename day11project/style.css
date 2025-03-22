@@ -40,7 +40,6 @@ body > h1 {
   height: 48vh;
   padding: 10px;
   padding-top: 5vh;
-
 }
 
 .changeQuotes > p {
@@ -60,4 +59,24 @@ body > h1 {
   color: rgb(255, 255, 255);
   /* border: ; */
   border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  body > h1 {
+    font-size: 1.8rem;
+  }
+  .quoteContainer {
+    width: 85%;
+  }
+  .changeQuotes{
+    height: 40vh;
+    font-size: 500rem;
+  }
+  .changeQuotes > p {
+    font-size: 1rem;
+  }
+  #btnChange {
+    font-size: 2rem;
+    margin-top: 20vh;
+  }
 }

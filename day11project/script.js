@@ -49,7 +49,7 @@ function randomQuotes() {
   txt = quotes[randomQuotes];
   const quoteElement = document.getElementById("quote");
   quoteElement.innerHTML = txt;
-  quoteElement.style.fontSize = "6vh";
+  quoteElement.style.fontSize = "5vh";
   quoteElement.style.color = "black";
   quoteElement.style.fontWeight = "bold";
 }
