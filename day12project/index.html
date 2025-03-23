@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Name Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>AI Business Name Generator</h1>
+    </div>
+
+    <div class="main-container">
+
+        <div class="card">
+
+             <p>Enter your idea and get a name for your business</p>
+            <h3>For example, if you enter "food", you might get "Foodify".</h3> 
+        </div>
+           
+        <textarea class="input-idea" id="inputIdea" placeholder="Enter your business idea..."></textarea>
+        <p id="error"></p>
+        <button id="generateBtn" class="btn-generate">Generate Name</button>
+
+
+    </div>
+    <div id="result">
+        <h1>Top 10 Business Names</h1>
+        <span><i class="fa-solid fa-arrow-left" id="backArrow"></i></span>
+        <div id="generatedName">
+
+        </div>
+        <button id="tryAgain">Try Again</button>
+    </div>
+
+
+
+    <script src="./test.js"></script>
+</body>
+</html>
