@@ -79,11 +79,12 @@ body {
     background-color: white;
     width: 50vw;
     height: 70vh;
-    /* display: none; */
+    display: none;
     margin: 0 auto;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
+    user-select: text;
 }
 
 #result>h1{
@@ -112,7 +113,7 @@ body {
     font-weight: 600;
     text-align: center;
     margin-top: 2vh;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
     width: 45vw;
     height: 45vh;
     align-items: center;

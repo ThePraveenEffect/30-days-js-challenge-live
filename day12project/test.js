@@ -1,4 +1,3 @@
-const inputIdea = document.getElementById("inputIdea");
 const generateBtn = document.getElementById("generateBtn");
 const result = document.getElementById("result");
 const error = document.getElementById("error");
@@ -9,7 +8,7 @@ const mainContainer = document.getElementById("mainContainer");
 
 
 const category = {
-    tech : ["NextGen Tech Solutions", "Cyber Innovation Hub", "AI Future Labs", "Quantum Tech Empire", "SmartVision Technologies", "CloudBoost Systems", "NeoByte Software", "FutureCode Solutions", "AI Genius Hub", "RoboMind Tech", "HyperLoop Technologies", "Quantum AI Creations", "CyberShield Systems", "AlphaTech Innovators", "SmartBot Creations", "Visionary AI Labs", "CloudNext Technologies", "FutureAI Enterprises", "NeuralTech Solutions", "TechWave Innovations", "SecureNet Systems", "AI Hub Experts", "Quantum Edge Tech", "HyperSync Technologies", "AI Revolution Labs", "CodeCrafters Hub", "AI Prime Innovations", "NextLevel Cyber Solutions", "SmartAI Global", "FutureByte Solutions", "DigitalGen Tech", "AI Power Systems", "CodeVision Technologies", "CyberElite Innovations", "VirtualMind AI", "QuantumBits Technologies", "TechSavvy Solutions", "SmartWorld AI", "CloudMinds Systems", "AI Bot Creations", "NeuralByte Tech", "AI Infinity Solutions", "UltraCode Systems", "Digital Brain AI", "FutureScope Tech", "CyberX Solutions", "AI Prodigy Hub", "CodeGenius Hub", "AI Visionary Systems", "CyberBrains Tech", "RoboCode Innovations", "HyperAI Solutions", "AI Synergy Hub", "SmartBot Technologies", "AI Core Systems", "FutureShield Tech", "DigitalSynapse AI", "CloudWave Innovations", "AI NeuralMinds", "QuantumSphere Tech", "CyberMind Labs", "AI Bot Intelligence", "TechSavants Solutions", "AI Spark Innovations", "SmartGrid Technologies", "CodeX AI Systems", "FutureLogic Tech", "HyperByte Innovations", "AI Velocity Hub", "NeuralLink Solutions", "SmartCloud Tech", "AI RoboWorld", "QuantumTech Experts", "CodeGenius AI", "CyberSec Solutions", "AI FutureSync", "DigitalWave Technologies", "AI Infinity Hub", "SmartGenius Tech", "AI HyperMind", "QuantumCloud Solutions", "AI UltraX Systems"
+    tech : ["NeuroByte", "CyberZen", "AlgoX", "CodeSpire", "TechNova", "AIQuanta", "BitVortex", "QuantumCore", "CyberMorph", "CloudNex", "NexaCode", "SynaptiX", "VirtuBit", "DataFusion", "InfiniTech", "CodePulse", "HyperNexus", "MetaByte", "Tronix", "NovaCore", "CybrixX", "AetherAI", "DeepSync", "GigaNex", "EchoCore", "ByteSynth", "Neuralogic", "TechOrbit", "QuantumEdge", "FutureSync", "HyperBitX", "CloudSynx", "AIStorm", "NextGenX", "CyberFlux", "SmartQuark", "CodeVortex", "AIVian", "QuantumNodeX", "DataSpiral", "MetaSynth", "GlitchTech", "HyperNexX", "NeuroSync", "ByteWave", "AstroCode", "CyberVerse", "NeuralynkX", "SynthoCore", "CodeCrest", "AlphaNeX"
 ],
     health: ["VitalEase", "MediCure", "WellNexus", "FitBloom", "PureVitals", "HealSync", "NutriCore", "ZenHealth", "MediBoost", "LifeCrest", "WellSphere", "CareNexa", "HolistiQ", "RevitaCare", "BodyZen", "VitaFuel", "GlowWell", "ThriveX", "PulseCore", "MediSphere", "ZenWell", "FitCrest", "NutriSync", "PureThrive", "HealX", "VivaCare", "MediPulse", "ZenCure", "WellNova", "RejuvaX", "CoreVital", "AuraWell", "LifeZen", "MediGlow", "FitSphere", "WellCrest", "HolistiCore", "ThriveWell", "MediFlow", "NutriZen", "PulseX", "HealHive", "ZenPulse", "WellBoost", "PureMedi", "VitalSync", "NutriEase", "GlowSync", "ThriveCore", "ZenThrive", "VitaSync"
 ],
@@ -28,21 +27,51 @@ result.style="display: none;"
 
 
 
-if(inputIdea === ""){
-    error.innerHTML="please enter category"
-    error.style="fontSize: 2vh;"
-}
-else if (inputIdea === "tech"){
-    mainContainer.style="display: none;"
-    result.style = "display:block;"
-    let txt = "";
-    for(let i = 0; i<10; i++){
-        let randomIndex = Math.floor(Math.random()* category.tech.length);
-        txt += (i + 1 );
-        category.tech[randomIndex];
-
-        
-
+function nameIdeas(){
+    let inputText = document.getElementById("inputIdea").value;
+    
+    if(inputText === ""){
+        error.innerHTML = "please enter category";
+        // error.style="fontSize: 2vh;"
     }
+    else if (inputText === "tech"){
+        mainContainer.style="display: none;"
+        result.style = "display:block;"
+        let txt = "";
+        for(let i = 0; i<10; i++){
+            let randomIndex = Math.floor(Math.random()* category.tech.length);
+            txt += (i + 1) + ". " + category.tech[randomIndex] + "<br>";
+            
+        }
+        document.getElementById("generatedName").innerHTML = txt;
+    }
+    else if (inputText === "health"){
+        mainContainer.style="display: none;"
+        result.style = "display:block;"
+        let txt = "";
+        for(let i = 0; i<10; i++){
+            let randomIndex = Math.floor(Math.random()* category.tech.length);
+            txt += (i + 1) + ". " + category.tech[randomIndex] + "<br>";
+            
+        }
+        document.getElementById("generatedName").innerHTML = txt;
+    }
+
+};
+
+document.getElementById("generateBtn").addEventListener("click", nameIdeas);
+
+
+function back(){
+    result.style="diplay:none;"
+    mainContainer.style = "display: block;"
 }
+
+result.style= "margin : auto;"
+
+backArrow.addEventListener("click", back);
+tryAgain.addEventListener("click",back);
+
+
+
 
