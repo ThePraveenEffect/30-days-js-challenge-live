@@ -153,4 +153,41 @@ body {
   .heading {
     font-size: 1.2rem;
   }
+  .main-container{
+    max-height: 99vh;
+    margin-top: 5vh;
+  }
+  .card>p{
+    font-size: 1.5rem;
+  }
+  .card>h3{
+    font-size: 1.7rem;
+  }
+  .input-idea{
+    height: 20vh;
+    margin-top: 3vh;
+  }
+  .btn-generate{
+    background-color: #2b2323;
+    color: white;
+    height: 8vh;
+    width: 60vw;
+    margin: auto;
+    margin-top: 2vh;
+    margin-left: 4vh;
+  }
+
+  #result{
+    width: 80vw;
+    height: 95vh;
+  }
+  #generatedName{
+    font-size: 1.8rem;
+    margin-bottom: 5vh;
+  }
+  #tryAgain{
+    width: 50vw;
+    height: 10vh;
+    padding: 3vh;
+  }
 }
